@@ -337,7 +337,7 @@ func getToken(login string, password string) (token string) {
 	}
 	if bodyJson.Code == 1 {
 		cookies := resp.Cookies()
-		token = cookies[0].Value + " " + cookies[1].Value
+		token = cookies[1].Value + " " + cookies[2].Value
 		wg.Done()
 	}
 	return
