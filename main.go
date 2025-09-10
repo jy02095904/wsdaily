@@ -123,7 +123,7 @@ func pushPlusNotify(token string, msg string) {
  */
 func pushtgNotify(token string, chat_id string, msg string) {
 	methodName := "TG推送任务"
-	url := "https://api.telegram.org/bot" + token + "/sendMessage"
+	url := "https://API.telegram.org/bot" + token + "/sendMessage"
 	contentType := "application/json"
 	data := `{"chat_id":"` + chat_id + `","parse_mode":"Markdown","text":"` + "🔰*活跃号日常推送* \n" + msg + `"}`
 	resp, err := http.Post(url, contentType, strings.NewReader(data))
